@@ -36,3 +36,19 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+jib {
+    from {
+        image = 'eclipse-temurin:17'
+    }
+    to {
+        image = 'nexus-ynov-sandbox.asys-cloud.fr/repository/ynov-docker/' + project.name + ":" + version
+        auth {
+            username = 'jenkins'
+            password = 'hDkxFxBSwmQ3ANLBFt'
+        }
+    }
+    container {
+        environment = ['ARTIFACT_VERSION': version]
+    }
+}

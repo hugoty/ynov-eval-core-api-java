@@ -32,7 +32,7 @@ pipeline {
    stage('Push sur le registry docker via jib') {
                steps {
                    // push sur le registry Docker via Jib
-                   bat './gradlew jib --image=nexus-ynov-sandbox.asys-cloud.fr/repository/ynov-docker/${project.name}:${version} --username=jenkins --password=hDkxFxBSwmQ3ANLBFt'
+                   bat './gradlew jib'
                }
            }
     }

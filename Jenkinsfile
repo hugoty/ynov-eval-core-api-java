@@ -36,10 +36,5 @@ pipeline {
     }
   }
 
-  post {
-    always {
-      // Archivage des artefacts
-      archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
-    }
-  }
+
 }

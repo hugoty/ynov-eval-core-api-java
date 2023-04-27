@@ -9,32 +9,32 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh './gradlew clean build'
+        bat './gradlew clean build'
       }
     }
     stage('Spotless Apply') {
       steps {
         // Exécution de la tâche spotlessApply
-        sh './gradlew spotlessApply'
+        bat './gradlew spotlessApply'
       }
     }
     stage('Test') {
       steps {
-        sh './gradlew test'
+        bat './gradlew test'
       }
     }
     stage('Gradle Build') {
       steps {
         // Exécution de la vérification Spotless
-        sh './gradlew spotlessCheck'
+        bat './gradlew spotlessCheck'
 
         // Compilation du code
-        sh './gradlew clean build'
+        bat './gradlew clean build'
       }
     }
     stage('Deploy') {
       steps {
-        sh './gradlew publish '
+        bat './gradlew publish '
       }
     }
   }

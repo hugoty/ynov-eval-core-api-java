@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/hugoty/ynov-eval-core-api-java'
+        git branch: 'add-pipeline-jar', url: 'https://github.com/hugoty/ynov-eval-core-api-java'
       }
     }
     stage('Build') {

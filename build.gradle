@@ -43,7 +43,7 @@ publishing {
     repositories {
         maven {
             name 'nexus'
-            url 'http://nexus-ynov-sandbox.asys-cloud.fr:8081/repository/maven-releases/'
+            url 'https://nexus-ynov-sandbox.asys-cloud.fr/repository/maven-releases/'
             allowInsecureProtocol true
             credentials {
                 username project.repoUser

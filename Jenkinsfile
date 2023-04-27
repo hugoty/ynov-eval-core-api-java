@@ -5,7 +5,7 @@ pipeline {
   stages {
       stage('Checkout') {
         steps {
-          git branch: 'main', url: 'https://github.com/votre-repo.git'
+          git branch: 'main', url: 'https://github.com/hugoty/ynov-eval-core-api-java'
         }
       }
       stage('Build') {

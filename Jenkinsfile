@@ -23,11 +23,12 @@ pipeline {
         bat './gradlew test'
       }
     }
-    stage('Jar') {
-          steps {
-            bat './gradlew jar '
-          }
-        }
+ stage('Archive Artifacts') {
+       steps {
+         archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
+       }
+     }
+
     stage('Deploy') {
       steps {
         bat './gradlew publish '

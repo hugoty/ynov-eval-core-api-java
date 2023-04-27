@@ -1,0 +1,16 @@
+java:
+  google-java-format:
+    version: '1.11.0' # la version de Google Java Format à utiliser
+
+  # Ignorer les fichiers qui correspondent à des modèles spécifiques
+  exclude:
+    - '**/build/*'
+
+  # Les règles pour le formatage du code
+  target:
+    # Formater tous les fichiers Java dans le répertoire src/main/java
+    include: 'src/main/java/**/*.java'
+    google-java-format:
+      # Ajouter une option pour forcer le retour à la ligne à la fin des fichiers
+      aosp:
+        insert_final_newline: true

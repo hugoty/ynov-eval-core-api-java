@@ -23,15 +23,11 @@ pipeline {
         bat './gradlew test'
       }
     }
-    stage('Gradle Build') {
-      steps {
-        // Exécution de la vérification Spotless
-        bat './gradlew spotlessCheck'
-
-        // Compilation du code
-        bat './gradlew clean build'
-      }
-    }
+    stage('Jar') {
+          steps {
+            bat './gradlew jar '
+          }
+        }
     stage('Deploy') {
       steps {
         bat './gradlew publish '

@@ -38,7 +38,7 @@ apply plugin: 'maven-publish'
 publishing {
     publications {
         maven(MavenPublication) {
-            artifact("build/libs/planner-core-core-api-java-Hugo-Raoult-$version"+".jar") {
+            artifact("build/libs/ynov-eval-core-api-java-Hugo-Raoult-$version"+".jar") {
                 extension 'jar'
             }
         }

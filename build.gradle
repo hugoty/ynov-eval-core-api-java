@@ -31,3 +31,24 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact("build/libs/planner-core-core-api-java-$version"+".jar") {
+                extension 'jar'
+            }
+        }
+    }
+    repositories {
+        maven {
+            name 'nexus'
+            url 'http://nexus-ynov-sandbox.asys-cloud.fr:8081/repository/maven-releases/'
+            allowInsecureProtocol true
+            credentials {
+                username project.repoUser
+                password project.repoPassword
+            }
+        }
+    }
+}

@@ -26,6 +26,8 @@ dependencies {
     implementation 'org.springdoc:springdoc-openapi-ui:1.6.11'
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    id 'com.diffplug.spotless' version '6.15.0'
+
 }
 
 tasks.named('test') {
